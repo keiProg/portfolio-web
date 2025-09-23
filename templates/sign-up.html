@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet", href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="signup-form-container">
+        <form method="post">
+        <div class="signup-form">
+            <input class="signup-username" type="text" name="username" placeholder="username">
+            <input class="signup-password" type="password" name="password" placeholder="password">
+            <a class="login-redirection" href="/">
+                Already have an account?
+            </a>
+            <button class="signup-button" type="submit">
+                Sign Up
+            </button>
+        </div>
+        </form>
+    </div>
+</body>
+</html>
