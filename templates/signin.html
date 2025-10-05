@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="navbar-container">
+        <nav class="navbar">
+            <h2 class="web-name">KeiShop</h2>
+            <a href="/">Cart</a>
+            <a href="/">Products</a>
+            <a href="/signin">Sign in</a>
+            <a href="/signup">Sign up</a>
+        </nav>
+    <div class="login-form-container">
+        <form method="post">
+        <div class="login-form">
+            <a href="/" class="login-goback">
+                Go Back
+            </a>
+            <input type="text" name="username" placeholder="Username">
+            <input type="password" name="password" placeholder="Password">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <p class="login-flash">{{message}}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <button type="submit">Sign In</button>
+            <a href="/signup" class="login-to-signin">
+                Don't have an account?
+            </a>
+        </div>
+        </form>
+    </div>
+</body>
+</html>

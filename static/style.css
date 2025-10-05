@@ -1,4 +1,5 @@
 body{
+<<<<<<< HEAD
     background-color: rgb(27, 27, 27);
 }
 
@@ -69,4 +70,307 @@ body{
 
     position: relative;
     bottom: 100px;
+=======
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+}
+
+.navbar-container{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    border-radius: 2px;
+    height: 50px;
+    justify-content: end;
+    align-items: center;
+}
+
+.navbar{
+    display: flex;
+    gap: 50px;
+    font-size: 16px;
+    text-decoration: none;
+
+    position: relative;
+    right: 25px;
+}
+
+.navbar a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.4s ease;
+}
+
+.navbar a:hover{
+    transform: scale(1.1);
+}
+
+.text-container{
+    display: inline;
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+    top: 115px;
+    cursor: default;
+}
+
+.text h2{
+    color: rgb(0, 0, 0);
+}
+
+.text p{
+    color: rgb(0, 0, 0);
+}
+
+.shop-btn{
+    border-radius: 4px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    display: inline-block;
+    width: 125px;
+    transition: transform 0.4s ease, color 0.2s ease, background-color 0.4s ease;
+}
+
+.shop-btn:hover{
+    transform: scale(1.1);
+    color: white;
+    background-color: black;
+}
+
+.web-name{
+    cursor: default;
+    display: inline;
+    margin: 0px;
+    position: absolute;
+    right: 1100px;
+    bottom: -5px;
+}
+
+.images-container{
+    display: inline;
+    text-align: center;
+    position: relative;
+    left: 20px;
+    top: 200px;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.images img{
+    margin-right: 50px;
+    width: 80px;
+    transition: transform 0.4s ease;
+}
+
+.images img:hover{
+    transform: translateY(-10px);
+}
+
+.sign-up-container{
+    display:inline-flex;
+    border: 1px solid black;
+    border-radius: 8px;
+    width: 300px;
+    height: 375px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    position: absolute;
+    left: 500px;
+    top: 115px;
+}
+
+.sign-up-form{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    position: absolute;
+    bottom: 200px;
+    right: 47px;
+}
+
+.sign-up-form input{
+    border: 1px black solid;
+    border-radius: 6px;
+    padding: 2px;
+    width: 200px;
+}
+
+.sign-up-form button{
+    border: 1px solid black;
+    border-radius: 6px;
+    position: relative;
+    top: 50px;
+}
+
+.goback-btn{
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    width: 65px;
+    transition: transform 0.4s ease;
+    position: absolute;
+    bottom: 140px;
+    right: 165px;  
+}
+
+.goback-btn:hover{
+    text-decoration: underline;
+    transform: translateY(-5px);
+}
+
+.signin-btn{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+    width: 210px;
+    transition: transform 0.4s ease;
+    position: absolute;
+    top: 265px;
+    left: 23px;
+}
+
+.signin-btn:hover{
+    text-decoration: underline;
+    transform: translateY(5px);
+}
+
+.flash-msg{
+    position: absolute;
+    top: 55px;
+    left: 40px;
+    color: red;
+    font-size: 12px;
+}
+
+.login-form-container{
+    display:inline-flex;
+    border: 1px solid black;
+    border-radius: 8px;
+    width: 300px;
+    height: 375px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    position: absolute;
+    left: 500px;
+    top: 115px;
+}
+
+.login-form-container .login-form{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    position: absolute;
+    bottom: 200px;
+    right: 47px;
+}
+
+.login-form input{
+    border: 1px black solid;
+    border-radius: 6px;
+    padding: 2px;
+    width: 200px;
+}
+
+.login-form button{
+    border: 1px solid black;
+    border-radius: 6px;
+    position: relative;
+    top: 50px;
+}
+
+.login-flash{
+    color: red;
+    font-size: 12px;
+    width: 300px;
+    position: absolute;
+    top: 75px;
+}
+
+.login-goback{
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    width: 65px;
+    transition: transform 0.4s ease;
+    position: absolute;
+    bottom: 140px;
+    right: 165px;
+}
+
+.login-goback:hover{
+    text-decoration: underline;
+    transform: translateY(-5px);
+}
+
+.login-to-signin{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+    width: 195px;
+    transition: transform 0.4s ease;
+    position: absolute;
+    top: 265px;
+    left: 40px;
+}
+
+.login-to-signin:hover{
+    text-decoration: underline;
+    transform: translateY(5px);
+}
+
+.product-form-container{
+    display: inline-flex;
+    justify-content: center;
+    justify-items: center;
+    border: 1px solid black;
+    width: 300px;
+    height: 350px;
+    position: absolute;
+    left: 500px;
+    top: 115px;
+}
+
+.product-form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 350px;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.product-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 10px;
+    position: relative;
+    top: 125px;
+    left: 103px;
+}
+
+.product-card img{
+    width: 100%;
+    height: 200px;    
+    object-fit: cover;    
+    border-radius: 8px;
+    margin-bottom: 10px;
+>>>>>>> 79a05f1 (Intial update)
 }

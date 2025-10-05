@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}"/>
+</head>
+<body>
+    <div class="navbar-container">
+        <nav class="navbar">
+            <h2 class="web-name">KeiShop</h2>
+            <a href="/">Cart</a>
+            <a href="/">Products</a>
+            <a href="/signin">Sign in</a>
+            <a href="/signup">Sign up</a>
+        </nav>
+    </div>
+    <div class="text-container">
+        <div class="text">
+            <h2>
+                KeiShop
+            </h2>
+            <p>
+                Welcome to KeiShop, your ultimate destination for effortless online shopping!<br>
+At KeiShop, we bring you a curated collection of high-quality products <br> across fashion, electronics, home essentials, and more—all at unbeatable prices.<br>
+Enjoy a seamless shopping experience with fast shipping, secure payments, and exceptional customer support.<br>
+Whether you’re looking to upgrade your style or find the perfect gift, KeiShop makes it simple, convenient, and enjoyable.<br>
+Start exploring now and discover why KeiShop is the smart choice for all your shopping needs!
+            </p>    
+            <br>
+            <a class="shop-btn" href="/home">SHOP NOW!</a>
+        </div>
+    </div>
+    <div class="images-container">
+        <div class="images">
+            <img src="{{ url_for('static', filename='imgs/08dbb3ce-d8a7-4c27-8f50-3a013a3a5dfc.png') }}">
+            <img src="{{ url_for('static', filename='imgs/08dbb3ce-d8a7-4c53-8b77-98ef4ea89f63.png')}}">
+            <img src="{{ url_for('static', filename='imgs/08dbb3ce-d8a7-4c60-8ead-dc3502e7f9da.png')}}">
+            <img src="{{ url_for('static', filename='imgs/08dbb3ce-d8a7-4e28-8cd7-7067aa960a7d.png')}}">
+        </div>
+    </div>
+</body>
+</html>
