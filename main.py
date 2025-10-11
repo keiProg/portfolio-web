@@ -1,41 +1,3 @@
-<<<<<<< HEAD
-from flask import Flask, render_template, redirect, session, url_for, flash, request
-from werkzeug.security import generate_password_hash, check_password_hash
-from flask_sqlalchemy import SQLAlchemy
-import os
-
-app = Flask(__name__)
-basedir = os.path.abspath(os.path.dirname(__file__))
-app.config['SECRET_KEY'] = 'helloworld123'
-app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{os.path.join(basedir, "users.db")}'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
-database = SQLAlchemy(app)
-
-class Users(database.Model):
-    id = database.Column(database.Integer, primary_key=True)
-    username = database.Column(database.String(150), unique=True, nullable=False)
-    password = database.Column(database.String(150), nullable=False)
-
-@app.route('/', methods=['POST', 'GET'])
-def login():
-    if request.method == 'POST':
-        username = request.form.get('username')
-        password = request.form.get('password')
-        user = Users.query.filter_by(username=username).first()
-
-        if user and check_password_hash(user.password, password):
-            print('user in database!')
-            return redirect(url_for('login'))
-        else:
-            print('user not in database!')
-            return redirect(url_for('login'))
-
-    return render_template('login.html')
-
-@app.route('/signup', methods=['POST', 'GET'])
-def signup():
-=======
 from flask import Flask, render_template, session, url_for, flash, redirect, request
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import check_password_hash, generate_password_hash
@@ -74,29 +36,10 @@ def signup():
     if 'user_id' in session:
         return redirect(url_for('home'))
     
->>>>>>> 79a05f1 (Intial update)
     if request.method == 'POST':
         username = request.form.get('username')
         password = request.form.get('password')
 
-<<<<<<< HEAD
-        if username and password:
-            hashed_password = generate_password_hash(password)
-            new_user = Users(username=username, password=hashed_password)
-            database.session.add(new_user)
-            database.session.commit()
-            print('Signed up succesfully!')
-            return redirect(url_for('login'))
-        else:
-            print('Input information to sign up!')
-            return redirect(url_for('signup'))
-
-    return render_template('sign-up.html')
-
-if __name__ == '__main__':
-    with app.app_context():
-        database.create_all()
-=======
         if not username or not password:
             flash('Fields are empty!')
             return render_template('signup.html')
@@ -177,6 +120,11 @@ def create_products():
 
     return render_template('products.html')
 
+@app.route('/product/<int:product_id>')
+def product_details(product_id):
+    product = Products.query.get_or_404(product_id)
+    return render_template('product_details.html', product=product)
+
 @app.route('/logout')
 def logout():
     session.pop('user_id', None)
@@ -195,5 +143,4 @@ def clear_products():
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
->>>>>>> 79a05f1 (Intial update)
     app.run(debug=True)

@@ -1,76 +1,4 @@
 body{
-<<<<<<< HEAD
-    background-color: rgb(27, 27, 27);
-}
-
-.login-form-container{
-    background-color: rgb(46, 46, 46);
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    display: inline-flex;
-    border: 1px rgb(120, 120, 120) solid;
-    border-radius: 4px;
-    width: 250px;
-    height: 300px;
-    position: relative;
-    left: 500px;
-    top: 100px;
-}
-
-.sign-up-redirection{
-    color: white;
-    font-size: 14px;
-}
-
-.login-username::placeholder, .login-password::placeholder, .signup-username::placeholder, .signup-password::placeholder{
-    text-align: center;
-}
-
-.login-form{
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    display: inline-flex;
-    flex-direction: column;
-    gap: 16px;
-
-    position: relative;
-    bottom: 15px;
-}
-
-.signup-form-container{
-    background-color: rgb(46, 46, 46);
-    display: inline-flex;
-    border: 1px rgb(120, 120, 120) solid;
-    justify-items: center;
-    justify-content: center;
-    align-items: center;
-    width: 250px;
-    height: 500px;
-    border-radius: 4px;
-
-    position: relative;
-    left: 1000px;
-    top: 33px;
-}
-
-.login-redirection{
-    color: white;
-    font-size: 14px;
-}
-
-.signup-form{
-    justify-items: center;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-
-    position: relative;
-    bottom: 100px;
-=======
     font-family: 'Courier New', Courier, monospace;
     background-color: rgb(255, 255, 255);
     overflow-x: hidden;
@@ -372,5 +300,59 @@ body{
     object-fit: cover;    
     border-radius: 8px;
     margin-bottom: 10px;
->>>>>>> 79a05f1 (Intial update)
+}
+
+.product-link{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.4s ease;
+}
+
+.product-link:hover{
+    transform: scale(1.05);
+}
+
+.details-img{
+    height: auto;
+    max-width: 100%;
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.purchase-btns button{
+    display: inline-flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+.btn-1{
+    background-color: white;
+    border: 1px solid black;
+    width: 100px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.btn-1:hover{
+    color: rgb(70, 70, 70);
+    border-color: rgb(48, 48, 48);
+}
+
+.btn-2{
+    width: 100px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 1px black solid;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-2:hover{
+    background-color: black;
+    color: white;
 }
