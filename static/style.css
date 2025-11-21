@@ -414,6 +414,7 @@ header nav ul li a:hover{
 }
 
 .content-1:hover, .content-2:hover, .content-3:hover {
+    color: rgb(120, 150, 255);
     transform: translateY(-5px);
     border-color: rgb(120, 150, 255);
 }
