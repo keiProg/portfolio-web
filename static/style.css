@@ -1,0 +1,434 @@
+html, body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+*{
+    user-select: none;
+}
+
+body{
+    background-color: white;
+    padding-top: 75px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='112' height='112' viewBox='0 0 200 200'%3E%3Cpolygon fill='%23DCEFFA' fill-opacity='0.54' points='100 0 0 100 100 100 100 200 200 100 200 0'/%3E%3C/svg%3E");
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px;
+    top: 0;
+    position: fixed;
+    width: 92.5%;
+}
+
+header nav{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+header nav ul li a:hover{
+    color: rgb(136, 164, 255);
+}
+
+.logo{
+    background-color: white;
+    border-radius: 50px;
+    padding: 5px 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cta{
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    border-radius: 50px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.cta:hover{
+    background-color: black;
+    color: white;
+}
+
+.hero-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 120px;
+}
+
+.hero-container h3{
+    font-weight: bold;
+    font-size: 32px;
+    margin: 0;
+}
+
+.hero-container p{
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.hero-container .humor-text{
+    position: relative;
+    top: 15px;
+}
+
+.hero-text{
+    height: 140px;
+}
+
+.hero-text-line{
+    width: 100%;
+    height: 3px;
+    margin: 0;
+    margin-top: 15px;
+    border-radius: 100px;
+}
+
+.hero-container .imgs{
+    position: relative;
+    top: 25px;
+}
+
+.hero-container .imgs img{
+    display: block;
+    width: 325px;
+    height: auto;
+    margin-bottom: 25px;
+    border: 1px solid black;
+    border-radius: 12px;
+    position: relative;
+    top: 25px;
+
+    transition: all 0.3s ease;
+}
+
+.hero-container .imgs img:hover{
+    transform: scale(1.05);
+}
+
+.hero-btns{
+    display: flex;
+    gap: 20px;
+}
+
+.hero-btns a{
+    border-radius: 10px;
+    padding: 6px 8px;
+    text-decoration: none;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: center;
+    padding: 80px 0px;
+}
+
+.footer-container .footer-logos{
+    display: flex;
+    gap: 20px;
+}
+
+.footer-container .footer-logos box-icon{
+    height: auto;
+    width: 30px;
+    transition: all 0.3s ease;
+}
+
+.footer-container .footer-logos box-icon:hover{
+    transform: translateY(-5px);
+}
+
+.sign-up-btn{
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    transition: all 0.3s ease;
+}
+
+.sign-up-btn:hover{
+    transform: scale(1.03);
+}
+
+.sign-in-btn{
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    transition: all 0.3s ease;
+}
+
+.sign-in-btn:hover{
+    background-color: black;
+    color: white;
+}
+
+.login-form-container{
+    display: block;
+    justify-items: center;
+    padding: 85px 0px;
+    margin-bottom: 0;
+}
+
+.login-form-container .login-form{
+    background: rgb(174, 194, 232);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    border-radius: 25px;
+    width: 500px;
+    height: 275px;
+}
+
+.login-form-container .login-form input, button, a{
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.login-form-container .login-form input{
+    border: 1.3px solid black;
+    border-radius: 5px;
+}
+
+.login-form-container .login-form button{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+.login-form-container .login-form a{
+    float: right;
+    font-size: 12px;
+    color: black;
+}
+
+.login-form-container .login-form button:hover{
+    color: white;
+    background-color: black;
+}
+
+.login-form-container .login-form a:hover{
+    color: rgb(149, 149, 149);
+}
+
+.aboutme-hero-container{
+    margin: 0px;
+    padding: 0px;
+}
+
+.aboutme-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 335px 75px;
+}
+
+.aboutme-container-1{
+    display: flex;
+    width: 225px;
+    height: 125px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid black;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: white;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.aboutme-container-1:hover{
+    transform: translateY(-6px);
+    border-color: rgb(88, 127, 255);
+    color: rgb(88, 127, 255);
+}
+
+.aboutme-container-1 h3{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.aboutme-logos{
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+}
+
+.text-container{
+    display: block;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 750px;
+}
+
+.aboutme-text h3{
+    font-size: 36px;
+    margin: 0;
+    padding: 0;
+}
+
+.projects-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 125px 25px;
+}
+
+.projects-container img{
+    display: block;
+    height: auto;
+    width: 300px;
+    border: 1px solid black;
+}
+
+.projects-container h3{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.project-card{
+    transition: all 0.3s ease;
+}
+
+.project-card:hover{
+    transform: scale(1.05);
+    border-color: rgb(128, 157, 255);
+    color: rgb(113, 146, 255);
+}
+
+.flash.error{
+    color: #f44336;
+    font-size: 12px;
+    position: relative;
+    bottom: 2px;
+}
+
+.flash.warning{
+    color: #f44336;
+    font-size: 12px;
+    position: relative;
+    bottom: 2px;
+}
+
+.hero-section-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 75px;
+    gap: 110px;
+}
+
+.hero-content-1 {
+    text-align: center;
+    position: static;
+}
+
+.hero-content-1 h3 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.hero-content-1 p {
+    margin: 5px 0px 20px 0;
+}
+
+.service-cta {
+    border: 1px solid black;
+    background-color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.service-cta:hover {
+    background-color: black;
+    color: white;
+}
+
+.hero-content-2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-content-2-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    width: 80%;
+}
+
+.content-1, .content-2, .content-3 {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.content-1:hover, .content-2:hover, .content-3:hover {
+    transform: translateY(-5px);
+    border-color: rgb(120, 150, 255);
+}
+
+.content-1-h3, .content-2-h3, .content-3-h3 {
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+    padding: 6px;
+    text-align: center;
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+
+.content-1-p, .content-2-p, .content-3-p {
+    padding-bottom: 10px;
+    text-align: center;
+    
+}

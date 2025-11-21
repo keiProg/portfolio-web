@@ -1,0 +1,46 @@
+    {% extends 'base.html' %}
+        {% block title %}
+            navbar
+        {% endblock %}
+        
+        {% block content %}
+            <div class="hero-container">
+                <div class="hero-text">
+                    {% if username %} 
+                    <h3>
+                        Hello, {{username}}
+                    </h3>
+                    {% else %}
+                    <h3>
+                        Hello,
+                    </h3>
+                    {% endif %}
+                    <p>
+                        I am a full-stack junior web developer, <br> passionate about delivering efficient and responsive websites.
+                    </p>
+                    {% if not session.get('user_id') %}
+                    <div class="hero-btns">
+                        <a href="/signin" class="sign-in-btn">Sign In</a>
+                        <a href="signup" class="sign-up-btn">Sign Up</a>
+                    </div>
+                    {% endif %}
+                    <div class="hero-text-line"></div>
+                </div>
+                <div class="img-container">
+                    <div class="imgs">
+                        <img src="static/Screenshot 2025-10-22 103309.png">
+                        <img src="static\Screenshot 2025-10-22 123756.png">
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer-container">
+                <div class="footer-logos">
+                    <box-icon type='logo' name='html5'></box-icon>
+                    <box-icon name='css3' type='logo' ></box-icon>
+                    <box-icon name='javascript' type='logo' ></box-icon>
+                    <box-icon name='python' type='logo' ></box-icon>
+                    <box-icon name='flask' type='logo' ></box-icon>
+                </div>
+            </footer>
+        {% endblock %}

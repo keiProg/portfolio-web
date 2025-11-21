@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+    {% block title %}
+        navbar
+    {% endblock %}
+
+    {% block content %}
+        <section class="login-form-container">
+            <div>
+                <form action="{{ url_for('sign_up') }}" method="post" class="login-form">
+                    <input type="text" name="username" placeholder="Don't use your real name">
+                    <input type="password" name="password" placeholder="Something unique">
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        <div class="flash-messages">
+                        {% for category, message in messages %}
+                            <div class="flash {{ category }}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                        </div>
+                    {% endif %}
+                    {% endwith %}
+                    <a href="/signin">Already have an Account?</a>
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+        </section>
+    {% endblock %}

@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block title %}
+    navbar
+{% endblock %}
+{% block content %}
+    <div class="hero-section-2">
+        <div class="hero-content-1">
+            {% if session.get('username') %}
+            <h3>
+                Hello, {{username}}
+            </h3>
+            {% else %}
+            <h3>
+                Hello,
+            </h3>
+            {% endif %}
+            <p>
+                Here are the services I provide.
+            </p>
+            <form>
+                <a href="#" class="service-cta" type="submit">Contact Me</a>
+            </form>
+        </div>
+        <div class="hero-content-2">
+            <div class="hero-content-2-container">
+                <div class="content-1">
+                    <div class="content-1-h3">
+                        <h3>
+                            Front-End Service
+                        </h3>
+                    </div>
+                    <div class="content-1-p">
+                        <p>
+                            Crafting interfaces users love to interact with.
+                        </p>
+                    </div>
+                </div>
+                <div class="content-2">
+                    <div class="content-2-h3">
+                        <h3>
+                            Back-End Service
+                        </h3>
+                    </div>
+                    <div class="content-2-p">
+                        <p>
+                            Powering systems that run flawlessly behind the scenes.
+                        </p>
+                    </div>
+                </div>
+                <div class="content-3">
+                    <div class="content-3-h3">
+                        <h3>
+                            Full-Stack Service
+                        </h3>
+                    </div>
+                    <div class="content-3-p">
+                        <p>
+                            Delivering end-to-end solutions from idea to execution.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

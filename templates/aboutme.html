@@ -1,0 +1,78 @@
+    {% extends 'base.html' %}
+    {% block title %}
+        navbar
+    {% endblock %}
+    {% block head %}
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    {% endblock %}
+    {% block content %}
+    <div class="text-container">
+        <div class="aboutme-text">
+        {% if session.get('user_id') %}    
+        <h3>
+            Hello, {{username}}
+        </h3>
+        {% else %}
+        <h3>
+            Hello,
+        </h3>
+        {% endif %}
+        <p>
+                    I’m a <strong>junior web developer</strong> with a passion for building clean, functional, and user-friendly web applications.
+        I’m a <strong>fast learner</strong> who loves exploring new technologies and improving with every project I take on.
+
+        I work primarily with <strong>Flask</strong>, <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong> — turning ideas into responsive, interactive, and efficient web experiences.<br>
+        Whether it’s crafting intuitive front-end designs or building reliable back-end logic, I enjoy the full process of web development from start to finish.
+
+        I’m always looking for new challenges, opportunities to grow, and projects where I can make an impact through code. <br><br>
+        <strong>Not a vibe coder — I actually ship code</strong>
+        </p>
+        </div>
+    </div>
+    <div class="aboutme-hero-container">
+        <div class="aboutme-container">
+            <div class="aboutme-container-1">
+                <h3>
+                    front-end
+                </h3>
+                <p>
+                    front-end text place holder.
+                </p>
+                <div class="aboutme-logos">
+                    <box-icon type='logo' name='html5'></box-icon>
+                    <box-icon name='css3' type='logo' ></box-icon>
+                    <box-icon name='javascript' type='logo' ></box-icon>
+                </div>
+            </div>
+            <div class="aboutme-container-1">
+                <h3>
+                    back-end
+                </h3>
+                <p>
+                    back-end text place holder.
+                </p>
+                <div class="aboutme-logos">
+                    <box-icon name='python' type='logo' ></box-icon>
+                    <box-icon name='flask' type='logo' ></box-icon>
+                </div>
+            </div>
+            <div class="aboutme-container-1">
+                <h3>
+                    full-stack
+                </h3>
+                <p>
+                    full-stack text place holder.
+                </p>
+                <div class="aboutme-logos">
+                    <box-icon type='logo' name='html5'></box-icon>
+                    <box-icon name='css3' type='logo' ></box-icon>
+                    <box-icon name='javascript' type='logo' ></box-icon>
+                    <box-icon name='python' type='logo' ></box-icon>
+                    <box-icon name='flask' type='logo' ></box-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
